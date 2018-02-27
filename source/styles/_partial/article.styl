@@ -66,64 +66,54 @@
   }
 }
 
-.title {
+.title
   font-size title-size
-  font-weight: bold
+  font-weight bold
   margin-bottom gutter-size
   line-height line-height
 
-  .home & {
+  .home &
     display block
-  }
 
-  .post & {
-    @media mq-mobile {
+  .post &
+    @media mq-mobile
       line-height 2.8rem
       font-size 1.6rem
-    }
-  }
 
-  &:after {
+  &:after
     display none
-  }
-}
 
-.content {
-  p {
-    line-height: 2rem
+.content
+  p
+    line-height 2rem
     margin 1rem 0
-    @media mq-mobile {
+    @media mq-mobile
       font-size: gutter-size
-    }
-  }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: bold
-    line-height: line-height-title
-    margin: line-height-title 0
+
+
+  h1, h2, h3, h4, h5, h6
+    font-weight bold
+    line-height line-height-title
+    margin line-height-title 0
     font-size title-size * .9
-  }
 
-  a {
+  a
     color color-link
-    &:before {
-      content: '['
-      margin: 0 2px
-      color: color-grey
-    }
-    &:after {
-      content: ']'
-      margin: 0 2px
-      color: color-grey
-    }
+    &:before
+      content '['
+      margin 0 2px
+      color color-grey
 
-    &.headerlink, &.fancybox {
-      &:after, &:before {
+    &:after
+      content ']'
+      margin 0 2px
+      color color-grey
+
+    &.headerlink, &.fancybox
+      &:after, &:before
         display none
-      }
-    }
-  }
-}
+
 
 .nav
   margin-bottom gutter-size * 4
@@ -136,16 +126,15 @@
 
     a
       color color-link
-      &:before {
+      &:before
         content: '['
         margin: 0 2px
         color: color-grey
-      }
-      &:after {
+
+      &:after
         content: ']'
         margin: 0 2px
         color: color-grey
-      }
 
     &:before
       content ' '
@@ -159,36 +148,29 @@
       margin-right gutter-size
 
 
-.excerpt {
+.excerpt
   color color-grey
   margin gutter-size 0
-}
 
-.article-footer {
-  display: flex
-  justify-content: space-between
-}
+.article-footer
+  display flex
+  justify-content space-between
 
-.date {
+.date
   color color-grey
   margin-bottom gutter-size
 
-  .home & {
+  .home &
     margin-bottom 0
-  }
-}
 
-.excerpt-link {
-  font-size: 1rem
-}
+.excerpt-link
+  font-size 1rem
 
-.tags {
-  .home & {
+.tags
+  .home &
     margin-bottom gutter-size
-  }
-}
 
-.tag-link {
+.tag-link
   background-color color-tag
   color: #fff
   line-height 22px
@@ -198,17 +180,13 @@
   margin-right .5rem
   font-size 12px
 
-  &:last-child {
+  &:last-child
     margin-right 0
-  }
 
-  &:hover {
+  &:hover
     color #fff
-  }
 
-  &:before {
+  &:before
     content '#'
     color #E0E8ED
     margin-right .2rem
-  }
-}

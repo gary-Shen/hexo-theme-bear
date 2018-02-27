@@ -4,53 +4,32 @@
 
 global-reset()
 
-html {
-  font-size: font-size
-}
+html
+  font-size font-size
 
-body {
-  background-color: color-background
-  color: color-text
-  font-family: font-sans
-  -webkit-font-smoothing: antialiased;
-}
+body
+  background-color color-background
+  color color-text
+  font-family font-sans
+  -webkit-font-smoothing antialiased
 
-a {
-  position: relative
-  color: color-text
-  text-decoration: none
+a
+  position relative
+  color color-text
+  text-decoration none
   transition color .2s ease
 
-  &:hover {
-    color: color-link
+  &:hover
+    color color-link
 
-    // &:after {
-    //   background-color: color-link
-    // }
-  }
+.container
+  width 38rem
+  margin 0 auto
+  box-sizing border-box
 
-  // &:after {
-  //   position: absolute
-  //   content: ' '
-  //   display: block
-  //   width: 100%;
-  //   bottom: -2px
-  //   left 0
-  //   height: 1px;
-  //   background-color: color-text
-  // }
-}
-
-.container {
-  width: 38rem
-  margin: 0 auto
-  box-sizing: border-box
-
-  @media mq-mobile {
-    width: 100%
-    padding: 0 1rem
-  }
-}
+  @media mq-mobile
+    width 100%
+    padding 0 1rem
 
 @import "_partial/header"
 @import "_partial/footer"
