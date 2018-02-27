@@ -1,0 +1,24 @@
+extends ../_partial/layout
+
+block content
+  .container
+    -var last;
+    each post in page.posts.data
+      -var year = post.date.year();
+      if last !== year
+        -last = year
+        .year-wrap
+          .year
+            a.title(href=url_for(config.archive_dir + '/' + year))= year
+        .archives
+          each post in page.posts.data
+            -var innerYear = post.date.year()
+            if innerYear === year
+              .post-archive
+                //- a(href=url_for(post.path))
+                .post-archive__content
+                  .post-archive__month= time(post.date, 'MM月')
+                  .post-archive__body
+                    a.post-archive__title(href=url_for(post.path))= post.title
+                    .post-archive__excerpt
+                      .post-archive__excerpt-content!= post.excerpt

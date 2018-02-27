@@ -1,0 +1,15 @@
+header.container#header
+  .header
+    .header-left
+      .avatar
+        img(src=theme.avatar)
+      .author
+        div.author-name
+          a(href="/")=theme.author
+        div.about-me=theme.aboutme
+
+    .header-right
+      ul.navigation
+        each link, text in theme.menu
+          li
+            a(href=link)=text

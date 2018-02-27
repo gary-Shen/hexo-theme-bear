@@ -1,0 +1,54 @@
+.archives
+  display flex
+  flex-wrap wrap
+
+.post-archive
+  box-sizing border-box
+  margin gutter-size 0
+  flex-basis 50%
+
+  @media mq-mobile
+    flex-basis 100%
+
+  @media mq-normal
+    &:nth-child(2n + 1)
+      padding-right 1rem
+
+    &:nth-child(2n)
+      padding-left 1rem
+
+.post-archive__content
+  background-color color-article-background
+  padding gutter-size
+  display flex
+  line-height line-height
+  transition all .6s ease
+
+  &:hover
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07)
+
+.post-archive__month
+  color color-tag
+  flex-basis 3rem
+  flex-shrink 0
+
+.post-archive__body
+  flex-grow 1
+  height 5rem
+  overflow hidden
+
+.post-archive__title
+  font-size 1rem
+  font-weight bold
+  margin-bottom .2rem
+  display block
+
+.post-archive__excerpt
+  color color-grey
+  height 3rem
+  overflow hidden
+  position relative
+
+.post-archive__excerpt-content
+  position absolute
+  width 100%

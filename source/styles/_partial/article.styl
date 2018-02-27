@@ -1,0 +1,214 @@
+.post
+  padding: 0
+
+.slide-hide
+  height 0
+  transition all 1s ease-in-out
+
+.article {
+  background-color: color-article-background
+  padding 1.6 * gutter-size
+  position: relative
+  margin-bottom gutter-size * 4
+
+  @media mq-mobile {
+    padding 2 * gutter-size
+    line-height 2rem
+  }
+
+  .home & {
+    transition: all .6s ease
+    margin-bottom gutter-size * 2
+
+    &:hover {
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07)
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #more {
+    display none
+  }
+
+  ul {
+    list-style unset
+  }
+
+  ol {
+    list-style decimal
+  }
+
+  li {
+    line-height: line-height
+    margin-bottom gutter-size
+    margin-left gutter-size
+    padding-left .2rem
+    color color-link
+
+    @media mq-mobile {
+      font-size gutter-size
+    }
+
+    .li-inner {
+      color color-text
+
+      .home & {
+        color color-grey
+      }
+
+      p {
+        margin: 0
+      }
+    }
+  }
+}
+
+.title {
+  font-size title-size
+  font-weight: bold
+  margin-bottom gutter-size
+  line-height line-height
+
+  .home & {
+    display block
+  }
+
+  .post & {
+    @media mq-mobile {
+      line-height 2.8rem
+      font-size 1.6rem
+    }
+  }
+
+  &:after {
+    display none
+  }
+}
+
+.content {
+  p {
+    line-height: 2rem
+    margin 1rem 0
+    @media mq-mobile {
+      font-size: gutter-size
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold
+    line-height: line-height-title
+    margin: line-height-title 0
+    font-size title-size * .9
+  }
+
+  a {
+    color color-link
+    &:before {
+      content: '['
+      margin: 0 2px
+      color: color-grey
+    }
+    &:after {
+      content: ']'
+      margin: 0 2px
+      color: color-grey
+    }
+
+    &.headerlink, &.fancybox {
+      &:after, &:before {
+        display none
+      }
+    }
+  }
+}
+
+.nav
+  margin-bottom gutter-size * 4
+
+  li
+    position relative
+    color color-grey
+    margin-bottom gutter-size
+    line-height 1.8rem
+
+    a
+      color color-link
+      &:before {
+        content: '['
+        margin: 0 2px
+        color: color-grey
+      }
+      &:after {
+        content: ']'
+        margin: 0 2px
+        color: color-grey
+      }
+
+    &:before
+      content ' '
+      display inline-block
+      vertical-align middle
+      left: -gutter-size
+      background-color color-link
+      width 4px
+      height 4px
+      border-radius 2px
+      margin-right gutter-size
+
+
+.excerpt {
+  color color-grey
+  margin gutter-size 0
+}
+
+.article-footer {
+  display: flex
+  justify-content: space-between
+}
+
+.date {
+  color color-grey
+  margin-bottom gutter-size
+
+  .home & {
+    margin-bottom 0
+  }
+}
+
+.excerpt-link {
+  font-size: 1rem
+}
+
+.tags {
+  .home & {
+    margin-bottom gutter-size
+  }
+}
+
+.tag-link {
+  background-color color-tag
+  color: #fff
+  line-height 22px
+  padding 0 .6rem
+  display inline-block
+  border-radius 12px
+  margin-right .5rem
+  font-size 12px
+
+  &:last-child {
+    margin-right 0
+  }
+
+  &:hover {
+    color #fff
+  }
+
+  &:before {
+    content '#'
+    color #E0E8ED
+    margin-right .2rem
+  }
+}

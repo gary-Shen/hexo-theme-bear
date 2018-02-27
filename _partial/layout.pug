@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="description", content=config.description)
+    meta(name="keyword", content=config.keyword)
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+    -var title = page.title
+    title= title ? title : theme.title
+    if theme.favicon
+      link(rel="shortcut icon", href=theme.favicon, type="image/x-icon")
+    link(href="/styles/site.css", rel="stylesheet")
+
+    block css
+
+    block head
+
+  //- HTML BODY
+  body
+
+    //- HEADER
+    include ./header.pug
+
+    //- CONTENT
+    block content
+
+    //- FOOTER
+    include ./footer.pug
+
+    include ./post_footer.pug
+    block js
