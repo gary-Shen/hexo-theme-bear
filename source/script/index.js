@@ -23,7 +23,7 @@
   $('.article ul, .article ol').each(function (i, elem) {
     $(elem).find('li').each(function(index, li) {
       if (!$(li).children().hasClass('li-inner')) {
-        $(li).wrapInner('<span class="li-inner"><span>');
+        $(li).wrapInner('<span class="li-inner"></span>');
       }
     });
   });
@@ -34,7 +34,25 @@
     var dom = '<span class="checkbox-wrap ' + (checked ? 'checked' : '') + '"></span>';
 
     if (!$elem.parent().hasClass('checkbox-wrap')) {
-      $elem.wrap(dom);
+      // $elem.wrap(dom);
+      var $parent = $elem.parent().parent();
+      var text = $parent.text();
+
+      $parent.html(dom + '<span class="check-content ' + (checked ? 'checked' : '') + '">' + text + '</span>');
+    }
+  });
+
+  // avatar
+  var $mask = $('.about-me-mask');
+  $('.avatar').on('click', function () {
+    if (!$mask.hasClass('open')) {
+      $mask.addClass('open');
+    }
+  });
+
+  $mask.on('click', function (e) {
+    if (e.target.classList.contains('about-me-mask')) {
+      $mask.removeClass('open');
     }
   });
 })(jQuery);

@@ -1,0 +1,14 @@
+.about-me-mask
+  .about-me-wrap
+    .about-me__header
+      .avatar
+        img(src=theme.avatar)
+    ul.socials
+      each item, name in theme.socials
+        li.social-item
+          span.label
+            img(src='/images/socials/' + name + '.svg', alt=item)
+          -if (['https', 'http', 'www'].indexOf(item) > -1)
+            a(href=url_for(item), target="_blank", title=item)= item
+          -else
+            span= item

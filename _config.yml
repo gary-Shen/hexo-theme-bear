@@ -11,6 +11,12 @@ aboutme: Halo
 excerpt_link: 全文...
 fancybox: true
 
+socials:
+  # github: "https://github.com/gary-Shen"
+  email: "guanlinshen@126.com"
+  wechat: "grinson"
+
+
 
 # Sidebar
 # sidebar: right
@@ -27,7 +33,7 @@ index_widgets:
 # - archive
 
 #主题方案
-highlight_theme: atom dark
+highlight_theme: atom light
 
 # widget behavior
 archive_type: 'monthly'

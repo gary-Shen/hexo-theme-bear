@@ -8,3 +8,6 @@ Hexo主题，移植Bear的阅读体验
 ## 截图
 
 ![curry](screenshot.jpg)
+
+## Bear in curry
+![curry](screenshot2.jpg)
