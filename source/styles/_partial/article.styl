@@ -56,6 +56,28 @@
     font-style: italic
   }
 
+  .checkbox-wrap {
+    background-size: 80%;
+    background-position: center;
+    background-color: #fff;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    padding: 1px;
+    vertical-align: text-top;
+    border-radius: 3px;
+    border: 1px color-tag solid;
+
+    &.checked {
+      background-image: url('/images/check.svg');
+      background-repeat: no-repeat;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
   #more {
     display none
   }

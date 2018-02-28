@@ -27,4 +27,14 @@
       }
     });
   });
+
+  $('.article input[type="checkbox"]').each(function (i, elem) {
+    var $elem = $(elem);
+    var checked = elem.checked;
+    var dom = '<span class="checkbox-wrap ' + (checked ? 'checked' : '') + '"></span>';
+
+    if (!$elem.parent().hasClass('checkbox-wrap')) {
+      $elem.wrap(dom);
+    }
+  });
 })(jQuery);
