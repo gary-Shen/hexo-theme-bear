@@ -29,6 +29,33 @@
     width: 100%;
   }
 
+  s, strike, del {
+    color color-grey
+  }
+
+  u {
+    text-decoration none
+    position relative
+
+    &:after {
+      position absolute
+      content ' '
+      bottom 0
+      left 0
+      width 100%
+      height 1px
+      background-color color-link
+    }
+  }
+
+  strong {
+    font-weight bold
+  }
+
+  em, cite {
+    font-style: italic
+  }
+
   #more {
     display none
   }
