@@ -36,6 +36,18 @@ $line-code-theme
     background: color-background;
     line-height: $base-line-height
 
+  table
+    width: 100%;
+    border: 1px solid highlight-table-border-color;
+    border-collapse: collapse;
+
+    th
+      border-bottom: 2px solid highlight-table-border-color!important;
+
+    th, td
+      border: 1px solid highlight-table-border-color;
+      padding: .75rem;
+
     p
       margin 0
   pre, code
@@ -60,6 +72,8 @@ $line-code-theme
       padding: 0
     table
       margin: 0
+      padding: 0
+      border: 0
       width: auto
     td
       border: none
