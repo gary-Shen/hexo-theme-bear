@@ -22,8 +22,49 @@ a
   &:hover
     color color-link
 
+#backToTop
+  position fixed
+  z-index 999
+  bottom gutter-size * 2
+  left 50%
+  margin-left container-width * .5 + gutter-size * 2
+  background-color color-article-background
+  width gutter-size * 2
+  height gutter-size * 2
+  transition all .2s ease-in-out
+  display flex
+  align-items center
+  justify-content center
+  opacity 0
+  cursor pointer
+
+  &.show
+    opacity 1
+
+  &:hover
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07)
+
+    .back-arrow-right
+      transform: rotate(45deg) translate(-3px, 0px);
+
+    .back-arrow-left
+      transform: rotate(-45deg) translate(3px, -0px);
+
+  .back-arrow
+    background-color color-link
+    width .7 * gutter-size
+    height 2px
+    transition all .2s ease-in-out
+
+  .back-arrow-right
+    transform: rotate(30deg) translate(-2px, 0px);
+
+  .back-arrow-left
+    transform: rotate(-30deg) translate(2px, -0px);
+
+
 .container
-  width 38rem
+  width container-width
   margin 0 auto
   box-sizing border-box
 

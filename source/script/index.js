@@ -58,5 +58,22 @@
   });
 
   // Back to top
+  var $backToTop = $('#backToTop');
+  $(document).on('scroll', function () {
+    var sX = $(document).scrollTop();
+    if (sX > 100) {
+      $backToTop.addClass('show');
+    }
+
+    if (sX <= 100) {
+      $backToTop.removeClass('show');
+    }
+  });
+
+  $backToTop.on('click', function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 300);
+});
 
 })(jQuery);
