@@ -4,7 +4,7 @@ block content
   .container.post
     section.article
       .title= page.title
-      .date 写于#{time(page.date, 'LL')}
+      .date 写于#{time(page.date, theme.date_format)}
       .content!= page.content
       if page.tags
         .tags!= list_tags(page.tags, { show_count: false, class: 'tag', style: false, separator: '' })
@@ -13,10 +13,10 @@ block content
     ul.nav
       if page.prev
         li 上一篇：
-          a(href=url_for(page.prev.path))= page.prev.title
+          a(href=url_for(page.prev.path))= page.prev.title || '未命名'
       if page.next
         li 下一篇：
-          a(href=url_for(page.next.path))= page.next.title
+          a(href=url_for(page.next.path))= page.next.title || '未命名'
 
     if !index && config.disqus_shortname
       .comments

@@ -5,16 +5,17 @@ rss: /atom.xml
 title: GARY.SHEN Web Developer
 
 author: GARY.SHEN
-aboutme: Halo
+aboutme: Halo~
 
 # Content
 excerpt_link: 全文...
 fancybox: true
+date_format: 'YYYY年MM月d日'
 
 socials:
   # github: "https://github.com/gary-Shen"
   email: "guanlinshen@126.com"
-  wechat: "grinson"
+  wechat: "Grinson"
 
 
 

@@ -31,10 +31,13 @@ $line-code-theme
 .article
   blockquote
     border-left: 3px solid color-link;
-    padding: 15px 20px;
+    padding: 16px 20px;
     margin: 10px 0;
     background: color-background;
     line-height: $base-line-height
+
+    p
+      margin: 0;
 
   table
     width: 100%;
@@ -42,7 +45,7 @@ $line-code-theme
     border-collapse: collapse;
 
     th
-      border-bottom: 2px solid highlight-table-border-color!important;
+      background-color: rgba(229, 229, 229, 0.28);
 
     th, td
       border: 1px solid highlight-table-border-color;
@@ -55,7 +58,6 @@ $line-code-theme
   code
     padding: 0.3em .5em;
     margin: 0 0.2em;
-    border-radius: 3px;
     @extend $line-code-theme
     border-radius: 2px
   pre
