@@ -7,13 +7,14 @@
 ## Install
 
 1. Download from GitHub
-
-        $ cd your-hexo-site
-        $ git clone https://github.com/gary-Shen/hexo-theme-curry themes/curry
-
+```shell
+$ cd your-hexo-site
+$ git clone https://github.com/gary-Shen/hexo-theme-curry themes/curry
+```
 2. Set the `theme` field in **your site** `_config.yml` to `curry`
-
-        theme: curry
+```yml
+theme: curry
+```
 
 ## Update
 
