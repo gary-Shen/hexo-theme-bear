@@ -39,10 +39,10 @@ highlight_theme: atom light
 archive_type: 'monthly'
 show_count: false
 
-disqus_shortname: www-garyshen-com
+disqus_shortname:
 
 # Miscellaneous
-google_analytics: 'UA-61220413-1'
+google_analytics:
 gauges_analytics:
 favicon: /images/avatar.png
 avatar: "/images/avatar.png"
