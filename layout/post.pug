@@ -4,7 +4,7 @@ block content
   .container.post
     section.article
       .title= page.title
-      .date 写于#{time(page.date, theme.date_format)}
+      .date 写于#{moment(page.date).format(theme.date_format)}
       .content!= page.content
       if page.tags
         .tags!= list_tags(page.tags, { show_count: false, class: 'tag', style: false, separator: '' })

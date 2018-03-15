@@ -12,5 +12,5 @@ block content
         div.article-footer
           a.excerpt-link(href=url_for(post.path))= theme.excerpt_link
           .article-footer__right
-            span.date 写于#{time(post.date, theme.date_format)}
+            span.date 写于#{moment(post.date).format(theme.date_format)}
         

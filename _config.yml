@@ -10,7 +10,7 @@ aboutme: Halo~
 # Content
 excerpt_link: 全文...
 fancybox: true
-date_format: 'YYYY年MM月d日'
+date_format: 'YYYY年MM月DD日'
 
 socials:
   # github: "https://github.com/gary-Shen"
