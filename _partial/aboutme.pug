@@ -8,7 +8,10 @@
         li.social-item
           span.label
             img(src='/images/socials/' + name + '.svg', alt=item)
-          -if (['https', 'http', 'www'].indexOf(item) > -1)
+          -var isLink = ['https', 'http', 'www'].some(function (prefix) {
+          -  return item.indexOf(prefix) > -1;
+          -});
+          -if (isLink)
             a(href=url_for(item), target="_blank", title=item)= item
           -else
             span= item

@@ -13,7 +13,7 @@ fancybox: true
 date_format: 'YYYY年MM月DD日'
 
 socials:
-  # github: "https://github.com/gary-Shen"
+  github: "https://github.com/gary-Shen"
   email: "guanlinshen@126.com"
   wechat: "Grinson"
 
@@ -43,7 +43,7 @@ show_count: false
 disqus_shortname:
 
 # Miscellaneous
-google_analytics:
+google_analytics: 'UA-61220413-1'
 gauges_analytics:
 favicon: /images/avatar.png
 avatar: "/images/avatar.png"
