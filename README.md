@@ -15,8 +15,7 @@ $ git clone https://github.com/gary-Shen/hexo-theme-curry themes/curry
 ```yml
 theme: curry
 ```
-3. Install dependencies❤️  
-Use these [Dependencies](https://github.com/gary-Shen/hexo-theme-curry/blob/master/package.json#L6) then run
+3. ❤️ Install dependencies: [Dependencies in package.json](https://github.com/gary-Shen/hexo-theme-curry/blob/master/package.json#L6)  
 ```
 npm install
 ```
