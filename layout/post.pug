@@ -25,7 +25,6 @@ block content
             a(href="http://disqus.com/?ref_noscript") comments powered by Disqus
 
 block js
-  include ../_partial/post_footer.pug
   != js('script/post')
   if config.disqus_shortname
     script
