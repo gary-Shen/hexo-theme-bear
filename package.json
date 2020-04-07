@@ -1,8 +1,8 @@
 {
-  "name": "hexo-theme-curry",
+  "name": "hexo-theme-bear",
   "version": "1.0.0",
   "private": true,
-  "description": "hexo theme curry",
+  "description": "hexo theme bear",
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-deployer-git": "^0.3.1",
