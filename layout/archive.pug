@@ -3,7 +3,7 @@ extends ../_partial/layout
 block content
   .container
     -var last;
-    each post in page.posts.data
+    each post in _.reverse(site.posts.data)
       -var year = post.date.year();
       if last !== year
         -last = year
@@ -11,7 +11,7 @@ block content
           .year
             a.title(href=url_for(config.archive_dir + '/' + year))= year
         .archives
-          each post in page.posts.data
+          each post in site.posts.data
             -var innerYear = post.date.year()
             if innerYear === year
               .post-archive
