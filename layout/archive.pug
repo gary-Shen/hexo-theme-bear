@@ -3,22 +3,16 @@ extends ../_partial/layout
 block content
   .container
     -var last;
-    each post in _.reverse(site.posts.data)
-      -var year = post.date.year();
-      if last !== year
-        -last = year
-        .year-wrap
-          .year
-            a.title(href=url_for(config.archive_dir + '/' + year))= year
-        .archives
-          each post in site.posts.data
-            -var innerYear = post.date.year()
-            if innerYear === year
-              .post-archive
-                //- a(href=url_for(post.path))
-                .post-archive__content
-                  .post-archive__month= time(post.date, 'MM月')
-                  .post-archive__body
-                    a.post-archive__title(href=url_for(post.path))= post.title
-                    .post-archive__excerpt
-                      .post-archive__excerpt-content!= post.excerpt
+    each group in _.chain(site.posts.data).filter(item => page.year ? item.date.year() === page.year : true).groupBy(item => item.date.year()).toPairs().sortBy(item => -item[0]).value()
+      .year-wrap
+        .year
+          a.title(href=url_for(config.archive_dir + '/' + group[0]))= group[0]
+      .archives
+        each post in group[1]
+          .post-archive
+            .post-archive__content
+              .post-archive__month= time(post.date, 'MM月')
+              .post-archive__body
+                a.post-archive__title(href=url_for(post.path))= post.title || '未命名'
+                .post-archive__excerpt
+                  .post-archive__excerpt-content!= post.excerpt
