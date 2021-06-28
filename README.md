@@ -16,7 +16,7 @@ $ git clone https://github.com/gary-Shen/hexo-theme-bear themes/bear
 theme: bear
 ```
 3. ❤️ Install dependencies.  
-The template is wrotten in pug. So you need install `hexo-render-pug`.
+The template is written in pug. So you need install `hexo-render-pug`.
 ```
 $ npm i hexo-render-pug
 # Install your all denpendencies if you didn't do this before.
