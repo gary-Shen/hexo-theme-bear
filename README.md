@@ -2,7 +2,7 @@
 
 此主题参考[Bear](http://www.bear-writer.com/)的阅读体验而制作。
 
-[Bear](http://www.bear-writer.com/) is awesome! So this theme is made with reference to it's reading experience.
+This theme is inspired by [Bear](http://www.bear-writer.com/) which is awesome!
 
 ## Install
 
