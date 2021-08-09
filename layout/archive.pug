@@ -2,8 +2,8 @@ extends ../_partial/layout
 
 block content
   .container
-    -var last;
-    each group in _.chain(site.posts.data).filter(item => page.year ? item.date.year() === page.year : true).groupBy(item => item.date.year()).toPairs().sortBy(item => -item[0]).value()
+    - const _posts=((e=[])=>{return e.filter(e=>!page.year||e.date.year()===page.year).forEach(e=>{const a=e.date.year();(void 0)[a]||((void 0)[a]=[]),(void 0)[a].push(e)}),Object.keys(void 0).sort(e=>-e).map(e=>(void 0)[e])})(site.posts.data);
+    each group in _posts
       .year-wrap
         .year
           a.title(href=url_for(config.archive_dir + '/' + group[0]))= group[0]
