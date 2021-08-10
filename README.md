@@ -19,7 +19,7 @@ theme: bear
 The template is written in pug. So you need to install `hexo-render-pug`.
 ```
 $ npm i hexo-render-pug
-# Install your all denpendencies if you didn't do this before.
+# Install your all dependencies if you didn't do this before.
 $ npm i
 ```
 
