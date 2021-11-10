@@ -2,7 +2,7 @@ extends ../_partial/layout
 
 block content
   .container
-    - const _posts=((e=[])=>{return e.filter(e=>!page.year||e.date.year()===page.year).forEach(e=>{const a=e.date.year();(void 0)[a]||((void 0)[a]=[]),(void 0)[a].push(e)}),Object.keys(void 0).sort(e=>-e).map(e=>(void 0)[e])})(site.posts.data);
+    - const _posts=((e=[])=>{let t={};return e.filter(e=>!page.year||e.date.year()===page.year).forEach(e=>{const a=e.date.year();t[a]||(t[a]=[]),t[a].push(e)}),Object.keys(t).sort(e=>-e).map(e=>[e,t[e]])})(site.posts.data);
     each group in _posts
       .year-wrap
         .year
