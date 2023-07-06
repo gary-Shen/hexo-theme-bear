@@ -1,0 +1,25 @@
+extends ../_partial/layout
+
+block content
+  .container
+    - const _posts = [];
+    - // 按标签将文章分组
+    - for (let i = 0; i < site.posts.data.length; i++) {
+    -   const post = site.posts.data[i];
+    -   if (post.tags.data.length === 0) {
+    -     continue;
+    -   }
+    -   const tags = post.tags.data.map(tag => tag.name);
+    -   if (tags.includes(page.tag)) {
+    -     _posts.push(post);
+    -   }
+    - }
+    .archives
+      each post in _posts
+        .post-archive
+          .post-archive__content
+            .post-archive__month= time(post.date, 'MM月')
+            .post-archive__body
+              a.post-archive__title(href=url_for(post.path))= post.title || '未命名'
+              .post-archive__excerpt
+                .post-archive__excerpt-content!= post.excerpt
