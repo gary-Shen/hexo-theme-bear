@@ -2,8 +2,22 @@ extends ../_partial/layout
 
 block content
   .container
-    - const _posts=((e=[])=>{let t={};return e.filter(e=>!page.year||e.date.year()===page.year).forEach(e=>{const a=e.date.year();t[a]||(t[a]=[]),t[a].push(e)}),Object.keys(t).sort(e=>-e).map(e=>[e,t[e]])})(site.posts.data);
-    each group in _posts
+    - const postsByYear = {};
+    - // 按年份将文章分组
+    - for (let i = 0; i < site.posts.data.length; i++) {
+    -   const post = site.posts.data[i];
+    -   if (!page.year || post.date.year() === page.year) {
+    -     const year = post.date.year();
+    -     if (!postsByYear[year]) {
+    -       postsByYear[year] = [];
+    -     }
+    -     postsByYear[year].push(post);
+    -   }
+    - }
+    - // 按年份倒序排序并返回结果
+    - const sortedYears = Object.keys(postsByYear).sort((a, b) => b - a);
+    - const sortedPosts = sortedYears.map(year => [year, postsByYear[year]]);
+    each group in sortedPosts
       .year-wrap
         .year
           a.title(href=url_for(config.archive_dir + '/' + group[0]))= group[0]
